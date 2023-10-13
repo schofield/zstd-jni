@@ -244,6 +244,7 @@ JNIEXPORT jlong JNICALL Java_com_github_luben_zstd_ZstdCompressCtx_init
   (JNIEnv *env, jclass clazz)
 {
     ZSTD_CCtx* cctx = ZSTD_createCCtx();
+
     return (jlong)(intptr_t) cctx;
 }
 
@@ -404,9 +405,37 @@ static size_t compress_direct_buffer_stream
     in.src = (*env)->GetDirectBufferAddress(env, src);
     if (in.src == NULL) return -ZSTD_error_memory_allocation;
 
+    /* Start QAT device, start QAT device at any
+    time before compression job started */
+    QZSTD_startQatDevice();
+    /* Create sequence producer state for QAT sequence producer */
+    void *sequenceProducerState = QZSTD_createSeqProdState();
+    
+    /* set these flags on the context as i get errors otherwise*/
+    ZSTD_CCtx_setParameter(cctx, ZSTD_c_enableLongDistanceMatching, 0);
+    ZSTD_CCtx_setParameter(cctx, ZSTD_c_windowLog, 0);
+    ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, 0);
+    ZSTD_CCtx_setParameter(cctx, ZSTD_ps_disable, 0);
+    /* register qatSequenceProducer */
+    ZSTD_registerSequenceProducer(
+        zc,
+        sequenceProducerState,
+        qatSequenceProducer
+    );
+    /* don't use sequence producer fallback to force error*/
+    /* ZSTD_CCtx_setParameter(zc, ZSTD_c_enableSeqProducerFallback, 1); */
     size_t result = ZSTD_compressStream2(cctx, &out, &in, end_op);
+
+
     *dst_offset = out.pos;
     *src_offset = in.pos;
+
+    /* Free sequence producer state */
+    QZSTD_freeSeqProdState(sequenceProducerState);
+    /* Please call QZSTD_stopQatDevice before
+    QAT is no longer used or the process exits */
+    QZSTD_stopQatDevice();
+
     return result;
 }
 

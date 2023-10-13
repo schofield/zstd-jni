@@ -64,7 +64,7 @@ jniCppExtensions := Seq("c", "S")
 
 jniGccFlags ++= Seq(
   "-std=c99", "-Wundef", "-Wshadow", "-Wcast-align", "-Wstrict-prototypes", "-Wno-unused-variable",
-  "-Wpointer-arith", "-DZSTD_LEGACY_SUPPORT=4", "-DZSTD_MULTITHREAD=1", "-lpthread", "-flto"
+  "-Wpointer-arith", "-DZSTD_LEGACY_SUPPORT=4", "-DZSTD_MULTITHREAD=0", "-lpthread", "-flto"
 )
 
 // compilation on Windows with MSYS/gcc needs extra flags in order
@@ -103,6 +103,15 @@ jniJreIncludes := {
     }
   }
 }
+
+// Add the QAT libs
+jniLibraries ++= Seq("-ladf",
+                     "-losal",
+                     "-lusdm_s",
+                     "-lqat_s",
+                     "-lqatseqproducer",
+                     "-ludev"
+                    )
 
 // Add the header files of Zstd to the include list
 jniIncludes ++= Seq("-I" + jniNativeSources.value.toString,
