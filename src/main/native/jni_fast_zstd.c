@@ -5,6 +5,7 @@
 #include <zstd.h>
 #include <zstd_errors.h>
 #include <stdint.h>
+#include <qatseqprod.h>
 
 // They can't change in the same VM
 static jfieldID compress_dict = 0;
@@ -244,6 +245,7 @@ JNIEXPORT jlong JNICALL Java_com_github_luben_zstd_ZstdCompressCtx_init
   (JNIEnv *env, jclass clazz)
 {
     ZSTD_CCtx* cctx = ZSTD_createCCtx();
+    QZSTD_startQatDevice();
     return (jlong)(intptr_t) cctx;
 }
 
@@ -354,6 +356,11 @@ JNIEXPORT jlong JNICALL Java_com_github_luben_zstd_ZstdCompressCtx_loadCDict0
 JNIEXPORT jlong JNICALL Java_com_github_luben_zstd_ZstdCompressCtx_reset0
   (JNIEnv *env, jclass jctx, jlong ptr) {
     ZSTD_CCtx* cctx = (ZSTD_CCtx*)(intptr_t) ptr;
+        /* Free sequence producer state */
+    /*QZSTD_freeSeqProdState(sequenceProducerState);/*
+    /* Please call QZSTD_stopQatDevice before
+    QAT is no longer used or the process exits */
+    /* QZSTD_stopQatDevice();*/
     return ZSTD_CCtx_reset(cctx, ZSTD_reset_session_and_parameters);
 }
 
@@ -480,7 +487,26 @@ JNIEXPORT jlong JNICALL Java_com_github_luben_zstd_ZstdCompressCtx_compressByteA
     void *src_buff = (*env)->GetPrimitiveArrayCritical(env, src, NULL);
     if (src_buff == NULL) goto E2;
 
+
+
     ZSTD_CCtx_reset(cctx, ZSTD_reset_session_only);
+
+    /* begin the hack in for qat*/ 
+    ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, 0);
+    ZSTD_CCtx_setParameter(cctx, ZSTD_c_enableLongDistanceMatching, (int)ZSTD_ps_disable);
+    /* Start QAT device, start QAT device at any
+    time before compression job started */
+    /* Create sequence producer state for QAT sequence producer */
+    void *sequenceProducerState = QZSTD_createSeqProdState();
+    /* register qatSequenceProducer */
+    ZSTD_registerSequenceProducer(
+        cctx,
+        sequenceProducerState,
+        qatSequenceProducer
+    );
+    /* DO NOT enable the fallback so things error */
+    /* ZSTD_CCtx_setParameter(cctx, ZSTD_c_enableSeqProducerFallback, 1);*/
+    printf("compress 2 called \n");
 
     size = ZSTD_compress2(cctx, ((char *)dst_buff) + dst_offset, (size_t) dst_size, ((char *)src_buff) + src_offset, (size_t) src_size);
     (*env)->ReleasePrimitiveArrayCritical(env, src, src_buff, JNI_ABORT);
