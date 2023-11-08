@@ -1,0 +1,1222 @@
+[info]     )
+[info]   Init Seed: 1619482774235089351
+[info] - should fail to decompress when the destination buffer is too small
+[info] ZstdInputStream
+[info] - should should round-trip compression/decompression at level 1
+[info] ZstdInputStream
+[info] - should should round-trip compression/decompression at level 3
+[info] ZstdInputStream
+[info] - should should round-trip compression/decompression at level 6
+[info] ZstdInputStream
+[info] - should should round-trip compression/decompression at level 9
+[info] ZstdInputStreamMT
+[info] - should should round-trip compression/decompression at level 1
+[info] ZstdInputStreamMT
+[info] - should should round-trip compression/decompression at level 3
+[info] ZstdInputStreamMT
+[info] - should should round-trip compression/decompression at level 6
+[info] ZstdInputStreamMT
+[info] - should should round-trip compression/decompression at level 9
+[info] ZstdDirectBufferDecompressingStream
+[info] - should should round-trip compression/decompression at level 1
+[info] ZstdDirectBufferDecompressingStream
+[info] - should should round-trip compression/decompression at level 3
+[info] ZstdDirectBufferDecompressingStream
+[info] - should should round-trip compression/decompression at level 6
+[info] ZstdDirectBufferDecompressingStream
+[info] - should should round-trip compression/decompression at level 9
+[info] ZstdInputStream in continuous mode
+[info] - should should round-trip using streaming API with unfinished chunks at level 1
+[info] ZstdInputStream in continuous mode
+[info] - should not block when the stream ends unexpectedly at level 1
+[info] ZstdInputStream in continuous mode
+[info] - should should round-trip using streaming API with unfinished chunks at level 3
+[info] ZstdInputStream in continuous mode
+[info] - should not block when the stream ends unexpectedly at level 3
+[info] ZstdInputStream in continuous mode
+[info] - should should round-trip using streaming API with unfinished chunks at level 6
+[info] ZstdInputStream in continuous mode
+[info] - should not block when the stream ends unexpectedly at level 6
+[info] ZstdInputStream in continuous mode
+[info] - should should round-trip using streaming API with unfinished chunks at level 9
+[info] ZstdInputStream in continuous mode
+[info] - should not block when the stream ends unexpectedly at level 9
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary at level 1
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary at level 3
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary at level 6
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary at level 9
+[info] - should be able to consume 1 byte at a time files compressed by the zstd binary at level 1
+[info] - should be able to consume 1 byte at a time files compressed by the zstd binary at level 3
+[info] - should be able to consume 1 byte at a time files compressed by the zstd binary at level 6
+[info] - should be able to consume 1 byte at a time files compressed by the zstd binary at level 9
+[info] - should be able to consume 2 frames in a file compressed by the zstd binary
+[info] ZstdDirectBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 1
+[info] ZstdDirectBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 3
+[info] ZstdDirectBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 6
+[info] ZstdDirectBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 9
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 1
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 3
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 6
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 9
+[info] - should be able to consume 2 frames in a file compressed by the zstd binary
+[info] - should be able to consume 2 frames even when they are exactly at the buffers limit
+[info] - should be able to consume 2 frames from channel
+[info] ZstdBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 1
+[info] ZstdBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 3
+[info] ZstdBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 6
+[info] ZstdBufferDecompressingStream
+[info] - should be able to produce 1 byte at a time files compressed by the zstd binary at level 9
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 1
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 3
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 6
+[info] - should be able to read 1 byte at a time files compressed by the zstd binary at level 9
+[info] - should be able to consume 2 frames in a file compressed by the zstd binary
+[info] - should be able to consume 2 frames even when they are exactly at the buffers limit
+[info] - should be able to consume 2 frames from channel
+[info] ZstdInputStream
+[info] - should do nothing on double close but throw on reading of closed stream
+[info] ZstdOutputStream
+[info] - should do nothing on double close but throw on writing on closed stream
+[info] ZstdDirectBufferCompressingStream
+[info] - should do nothing on double close but throw on writing on closed stream
+[info] ZstdOutputStream
+[info] - should produce the same compressed file as zstd binary at level 1
+[info] ZstdOutputStream
+[info] - should produce the same compressed file as zstd binary at level 3
+[info] ZstdOutputStream
+[info] - should produce the same compressed file as zstd binary at level 6
+[info] ZstdOutputStream
+[info] - should produce the same compressed file as zstd binary at level 9
+[info] ZstdDirectBufferCompressingStream
+[info] - should produce the same compressed file as zstd binary at level 1
+[info] ZstdDirectBufferCompressingStream
+[info] - should produce the same compressed file as zstd binary at level 3
+[info] ZstdDirectBufferCompressingStream
+[info] - should produce the same compressed file as zstd binary at level 6
+[info] ZstdDirectBufferCompressingStream
+[info] - should produce the same compressed file as zstd binary at level 9
+[info] ZstdDirectBufferCompressingStream
+[info] - should even when writing one byte at a time produce the same compressed file as zstd binary at level 1
+[info] ZstdDirectBufferCompressingStream
+[info] - should even when writing one byte at a time produce the same compressed file as zstd binary at level 3
+[info] ZstdDirectBufferCompressingStream
+[info] - should even when writing one byte at a time produce the same compressed file as zstd binary at level 6
+[info] ZstdDirectBufferCompressingStream
+[info] - should even when writing one byte at a time produce the same compressed file as zstd binary at level 9
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary version 04
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary version 05
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary version 06
+[info] ZstdInputStream
+[info] - should be able to consume files compressed by the zstd binary version 07
+[info] ZstdInputStream in continuous mode
+[info] - should be able to consume files compressed by the zstd binary version 04
+[info] ZstdInputStream in continuous mode
+[info] - should be able to consume files compressed by the zstd binary version 05
+[info] ZstdInputStream in continuous mode
+[info] - should be able to consume files compressed by the zstd binary version 06
+[info] ZstdInputStream in continuous mode
+[info] - should be able to consume files compressed by the zstd binary version 07
+[info] ZstdInputStream.read() of empty frame
+compress 2 called 
+[info] - should return -1
+[info] ZstdInputStream.read(buf, offset, len) of empty frame
+compress 2 called 
+[info] - should return -1
+[info] RecyclingBufferPool
+[info] - should recycle buffers
+[info] Zstd
+[info] - should validate when extracting backing arrays from ByteBuffers
+[info] streaming compressiong and decompression
+[info] - should roundtrip
+[info] magicless frames
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 34s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+[info] - should be magicless and roundtrip
+[info] advanced compression api
+[info] - should produce the same file as binary zstd
+[info] ZstdDictSpec:
+[info] Zstd
+[info] - should report error when failing to make a dict
+[info] Zstd
+compress 2 called 
+[info] - should round-trip compression/decompression with dict at level 1 with legacy true
+[info] - should round-trip compression/decompression ByteBuffers with dict at level 1 with legacy true
+compress 2 called 
+[info] - should round-trip compression/decompression with fast dict at level 1 with legacy true
+compress 2 called 
+[info] - should round-trip compression/decompression in place with fast dict at level 1 with legacy true
+[info] - should round-trip compression/decompression ByteBuffers with fast dict at level 1 with legacy true
+compress 2 called 
+[info] - should round-trip compression/decompression with byte[]/fast dict at level 1 with legacy true
+compress 2 called 
+[info] - should round-trip compression/decompression with fast/byte[] dict at level 1 with legacy true
+compress 2 called 
+[info] - should compress with a byte[] and decompress with a ByteBuffer using byte[] dict 1 with legacy true
+compress 2 called 
+[info] - should compress with a byte[] and decompress with a ByteBuffer using fast dict 1 with legacy true
+[info] - should compress with a ByteBuffer and decompress with a byte[] using fast dict 1 with legacy true
+[info] - should compress with a ByteBuffer and decompress with a byte[] using byte[] dict 1 with legacy true
+[info] - should round-trip streaming compression/decompression with byte[] dict with legacy true
+[info] - should round-trip streaming compression/decompression with fast dict with legacy true
+[info] - should round-trip streaming compression/decompression with multiple fast dicts with legacy true
+[info] - should round-trip streaming compression/decompression with multiple fast dicts with legacy true and disabled multiple dict references
+[info] - should round-trip streaming ByteBuffer compression/decompression with byte[] dict with legacy true
+[info] - should round-trip streaming ByteBuffer compression/decompression with fast dict with legacy true
+[info] Zstd
+compress 2 called 
+[info] - should round-trip compression/decompression with dict at level 1 with legacy false
+[info] - should round-trip compression/decompression ByteBuffers with dict at level 1 with legacy false
+compress 2 called 
+[info] - should round-trip compression/decompression with fast dict at level 1 with legacy false
+compress 2 called 
+[info] - should round-trip compression/decompression in place with fast dict at level 1 with legacy false
+[info] - should round-trip compression/decompression ByteBuffers with fast dict at level 1 with legacy false
+compress 2 called 
+[info] - should round-trip compression/decompression with byte[]/fast dict at level 1 with legacy false
+compress 2 called 
+[info] - should round-trip compression/decompression with fast/byte[] dict at level 1 with legacy false
+compress 2 called 
+[info] - should compress with a byte[] and decompress with a ByteBuffer using byte[] dict 1 with legacy false
+compress 2 called 
+[info] - should compress with a byte[] and decompress with a ByteBuffer using fast dict 1 with legacy false
+[info] - should compress with a ByteBuffer and decompress with a byte[] using fast dict 1 with legacy false
+[info] - should compress with a ByteBuffer and decompress with a byte[] using byte[] dict 1 with legacy false
+[info] - should round-trip streaming compression/decompression with byte[] dict with legacy false
+[info] - should round-trip streaming compression/decompression with fast dict with legacy false
+[info] - should round-trip streaming compression/decompression with multiple fast dicts with legacy false
+[info] - should round-trip streaming compression/decompression with multiple fast dicts with legacy false and disabled multiple dict references
+[info] - should round-trip streaming ByteBuffer compression/decompression with byte[] dict with legacy false
+[info] - should round-trip streaming ByteBuffer compression/decompression with fast dict with legacy false
+[info] ZstdPerfSpec:
+compress 2 called 
+[info] - should be fast for compressable data at level -3 *** FAILED ***
+[info]   com.github.luben.zstd.ZstdException: Block-level external sequence producer returned an error code
+[info]   at com.github.luben.zstd.ZstdCompressCtx.compressByteArray(ZstdCompressCtx.java:451)
+[info]   at com.github.luben.zstd.ZstdCompressCtx.compress(ZstdCompressCtx.java:540)
+[info]   at com.github.luben.zstd.Zstd.compress(Zstd.java:969)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.$anonfun$bench$3(Perf.scala:72)
+[info]   at com.github.luben.zstd.ZstdPerfSpec$AllocTracker.timeAndAlloc(Perf.scala:31)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.$anonfun$bench$2(Perf.scala:72)
+[info]   at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:190)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.bench(Perf.scala:70)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.$anonfun$new$2(Perf.scala:408)
+[info]   at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+[info]   ...
+compress 2 called 
+[info] - should be fast for compressable data at level -1 *** FAILED ***
+[info]   com.github.luben.zstd.ZstdException: Block-level external sequence producer returned an error code
+[info]   at com.github.luben.zstd.ZstdCompressCtx.compressByteArray(ZstdCompressCtx.java:451)
+[info]   at com.github.luben.zstd.ZstdCompressCtx.compress(ZstdCompressCtx.java:540)
+[info]   at com.github.luben.zstd.Zstd.compress(Zstd.java:969)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.$anonfun$bench$3(Perf.scala:72)
+[info]   at com.github.luben.zstd.ZstdPerfSpec$AllocTracker.timeAndAlloc(Perf.scala:31)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.$anonfun$bench$2(Perf.scala:72)
+[info]   at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:190)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.bench(Perf.scala:70)
+[info]   at com.github.luben.zstd.ZstdPerfSpec.$anonfun$new$2(Perf.scala:408)
+[info]   at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+[info]   ...
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 36s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 37s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 37s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 37s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 37s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 1
+      --
+      Compression:        647 MB/s  alloc/cycle: 6208080 B
+      Decompression:      2032 MB/s  alloc/cycle: 56 B
+      Compression Ratio:  6.34939942222898
+    
+
+      Compressable data at 1 in a direct ByteBuffer
+      --
+      Compression:        606 MB/s  alloc/cycle: 168 B
+      Decompression:      2290 MB/s  alloc/cycle: 48 B
+      Compression Ratio:  7.6677492282445297s
+    
+
+      Compressable data at 1 in a direct ByteBuffer and pre-allocated contexts
+      --
+      Compression:        731 MB/s  alloc/cycle: 0 B
+      Decompression:      2295 MB/s  alloc/cycle: 240 B
+      Compression Ratio:  7.6794372826129128s
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 38s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 38s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 38s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 38s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+
+      Compressable data at 1 with multi-threaded
+      --
+      Compression:        749 MB/s  alloc/cycle: 0 B
+      Decompression:      2027 MB/s  alloc/cycle: 16 B
+      Compression Ratio:  6.34939942222898
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+
+      Compressable data at 1 with Long Distance Matching
+      --
+      Compression:        763 MB/s  alloc/cycle: 0 B
+      Decompression:      2084 MB/s  alloc/cycle: 16 B
+      Compression Ratio:  6.3494069643822275
+    
+[info] - should be fast for compressable data at level 1
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 39s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 40s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 3
+      --
+      Compression:        642 MB/s  alloc/cycle: 6208080 B
+      Decompression:      1936 MB/s  alloc/cycle: 56 B
+      Compression Ratio:  6.34939942222898
+    
+
+      Compressable data at 3 in a direct ByteBuffer
+      --
+      Compression:        531 MB/s  alloc/cycle: 168 B
+      Decompression:      2284 MB/s  alloc/cycle: 48 B
+      Compression Ratio:  8.3633166127916830s
+    
+
+      Compressable data at 3 in a direct ByteBuffer and pre-allocated contexts
+      --
+      Compression:        558 MB/s  alloc/cycle: 0 B
+      Decompression:      2335 MB/s  alloc/cycle: 240 B
+      Compression Ratio:  8.4297645782342111s
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 41s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 41s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 41s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 41s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 41s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 3 with multi-threaded
+      --
+      Compression:        762 MB/s  alloc/cycle: 0 B
+      Decompression:      2072 MB/s  alloc/cycle: 16 B
+      Compression Ratio:  6.34939942222898
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 41s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 3 with Long Distance Matching
+      --
+      Compression:        758 MB/s  alloc/cycle: 0 B
+      Decompression:      2085 MB/s  alloc/cycle: 16 B
+      Compression Ratio:  6.3494069643822275
+    
+[info] - should be fast for compressable data at level 3
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 42s
+
+      Compressable data at 6
+      --
+      Compression:        603 MB/s  alloc/cycle: 6109312 B
+      Decompression:      2229 MB/s  alloc/cycle: 56 B
+      Compression Ratio:  7.193333763968736
+    
+
+      Compressable data at 6 in a direct ByteBuffer
+      --
+      Compression:        179 MB/s  alloc/cycle: 168 B
+      Decompression:      2690 MB/s  alloc/cycle: 48 B
+      Compression Ratio:  9.7366417358548344s
+    
+
+      Compressable data at 6 in a direct ByteBuffer and pre-allocated contexts
+      --
+      Compression:        180 MB/s  alloc/cycle: 0 B
+      Decompression:      2715 MB/s  alloc/cycle: 240 B
+      Compression Ratio:  9.8391942039229546s
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+
+      Compressable data at 6 with multi-threaded
+      --
+      Compression:        769 MB/s  alloc/cycle: 0 B
+      Decompression:      2383 MB/s  alloc/cycle: 16 B
+      Compression Ratio:  7.193333763968736
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 46s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 47s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 6 with Long Distance Matching
+      --
+      Compression:        779 MB/s  alloc/cycle: 0 B
+      Decompression:      2382 MB/s  alloc/cycle: 16 B
+      Compression Ratio:  7.193343444307329
+    
+[info] - should be fast for compressable data at level 6
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 47s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 47s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 47s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 47s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 47s
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 9
+      --
+      Compression:        593 MB/s  alloc/cycle: 6084968 B
+      Decompression:      2123 MB/s  alloc/cycle: 56 B
+      Compression Ratio:  7.4370354705052477s
+    
+
+      Compressable data at 9 in a direct ByteBuffer
+      --
+      Compression:        128 MB/s  alloc/cycle: 168 B
+      Decompression:      2885 MB/s  alloc/cycle: 48 B
+      Compression Ratio:  10.294232065479056s
+    
+
+      Compressable data at 9 in a direct ByteBuffer and pre-allocated contexts
+      --
+      Compression:        126 MB/s  alloc/cycle: 0 B
+      Decompression:      2894 MB/s  alloc/cycle: 240 B
+      Compression Ratio:  10.460778538620659s
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 9 with multi-threaded
+      --
+      Compression:        733 MB/s  alloc/cycle: 0 B
+      Decompression:      2486 MB/s  alloc/cycle: 16 B
+      Compression Ratio:  7.437035470505247
+    
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called 
+compress 2 called t / Test / executeTests 52s
+compress 2 called 
+compress 2 called 
+
+      Compressable data at 9 with Long Distance Matching
+      --
+      Compression:        746 MB/s  alloc/cycle: 0 B
+      Decompression:      2475 MB/s  alloc/cycle: 17 B
+      Compression Ratio:  7.4370458178721845
+    
+[info] - should be fast for compressable data at level 9
+
+      Streaming at -3
+      --
+      Compression:        742 MB/s  alloc/cycle: 132400 B
+      Decompression:      2302 MB/s  alloc/cycle: 131601 B
+      Compression Ratio:  5.4404054899925253s
+    
+
+      Streaming with BufferPool at -3
+      --
+      Compression:        738 MB/s  alloc/cycle: 3125 B
+      Decompression:      2300 MB/s  alloc/cycle: 473 B
+      Compression Ratio:  5.4404054899925253s
+    
+
+      Streaming (multi-threaded) at -3
+      --
+      Compression:        228 MB/s  alloc/cycle: 132107 B
+      Decompression:      2136 MB/s  alloc/cycle: 131577 B
+      Compression Ratio:  5.4364437248215325s
+    
+
+      Streaming at -3 to direct ByteBuffers
+      --
+      Compression:        749 MB/s  alloc/cycle: 446 B
+      Decompression:      2361 MB/s  alloc/cycle: 402 B
+      Compression Ratio:  5.4404054899925255s
+    
+
+      Streaming at -3 with Long Distance Matching
+      --
+      Compression:        307 MB/s  alloc/cycle: 132107 B
+      Decompression:      1721 MB/s  alloc/cycle: 131577 B
+      Compression Ratio:  5.9705987152436096s
+    
+[info] - should be fast with streaming at level -3
+
+      Streaming at -1
+      --
+      Compression:        690 MB/s  alloc/cycle: 131825 B
+      Decompression:      2208 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  6.0483936670016027s
+    
+
+      Streaming with BufferPool at -1
+      --
+      Compression:        697 MB/s  alloc/cycle: 209 B
+      Decompression:      2231 MB/s  alloc/cycle: 201 B
+      Compression Ratio:  6.0483936670016027s
+    
+
+      Streaming (multi-threaded) at -1
+      --
+      Compression:        213 MB/s  alloc/cycle: 131825 B
+      Decompression:      2053 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  6.0439346723895415s
+    
+
+      Streaming at -1 to direct ByteBuffers
+      --
+      Compression:        581 MB/s  alloc/cycle: 121 B
+      Decompression:      2283 MB/s  alloc/cycle: 105 B
+      Compression Ratio:  6.0483936670016029s
+    
+
+      Streaming at -1 with Long Distance Matching
+      --
+      Compression:        301 MB/s  alloc/cycle: 131825 B
+      Decompression:      1720 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  6.6169359930083260s
+    
+[info] - should be fast with streaming at level -1
+
+      Streaming at 1
+      --
+      Compression:        686 MB/s  alloc/cycle: 131825 B
+      Decompression:      2084 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  7.6677932257268661s
+    
+
+      Streaming with BufferPool at 1
+      --
+      Compression:        688 MB/s  alloc/cycle: 209 B
+      Decompression:      2100 MB/s  alloc/cycle: 201 B
+      Compression Ratio:  7.6677932257268661s
+    
+
+      Streaming (multi-threaded) at 1
+      --
+      Compression:        208 MB/s  alloc/cycle: 131825 B
+      Decompression:      1925 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  7.6601672107560663s
+    
+
+      Streaming at 1 to direct ByteBuffers
+      --
+      Compression:        692 MB/s  alloc/cycle: 121 B
+      Decompression:      2126 MB/s  alloc/cycle: 105 B
+      Compression Ratio:  7.6677932257268663s
+    
+
+      Streaming at 1 with Long Distance Matching
+      --
+      Compression:        304 MB/s  alloc/cycle: 131825 B
+      Decompression:      1606 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  8.2062241218111464s
+    
+[info] - should be fast with streaming at level 1
+
+      Streaming at 3
+      --
+      Compression:        527 MB/s  alloc/cycle: 131825 B
+      Decompression:      2032 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  8.3654631672848565s
+    
+
+      Streaming with BufferPool at 3
+      --
+      Compression:        530 MB/s  alloc/cycle: 209 B
+      Decompression:      2062 MB/s  alloc/cycle: 201 B
+      Compression Ratio:  8.3654631672848565s
+    
+
+      Streaming (multi-threaded) at 3
+      --
+      Compression:        158 MB/s  alloc/cycle: 131825 B
+      Decompression:      1849 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  8.3633689546727587s
+    
+
+      Streaming at 3 to direct ByteBuffers
+      --
+      Compression:        534 MB/s  alloc/cycle: 121 B
+      Decompression:      2085 MB/s  alloc/cycle: 105 B
+      Compression Ratio:  8.3654631672848568s
+    
+
+      Streaming at 3 with Long Distance Matching
+      --
+      Compression:        249 MB/s  alloc/cycle: 131825 B
+      Decompression:      1572 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  8.8702587258362469s
+    
+[info] - should be fast with streaming at level 3
+
+      Streaming at 6
+      --
+      Compression:        175 MB/s  alloc/cycle: 131825 B
+      Decompression:      2370 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  9.7368190959167611s
+    
+
+      Streaming with BufferPool at 6
+      --
+      Compression:        175 MB/s  alloc/cycle: 209 B
+      Decompression:      2385 MB/s  alloc/cycle: 201 B
+      Compression Ratio:  9.7368190959167612s
+    
+
+      Streaming (multi-threaded) at 6
+      --
+      Compression:        71 MB/s  alloc/cycle: 131825 B
+      Decompression:      2105 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  9.7367126791042336s
+    
+
+      Streaming at 6 to direct ByteBuffers
+      --
+      Compression:        176 MB/s  alloc/cycle: 121 B
+      Decompression:      2422 MB/s  alloc/cycle: 105 B
+      Compression Ratio:  9.7368190959167618s
+    
+
+      Streaming at 6 with Long Distance Matching
+      --
+      Compression:        147 MB/s  alloc/cycle: 131825 B
+      Decompression:      1662 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  9.8521063418805940s
+    
+[info] - should be fast with streaming at level 6
+
+      Streaming at 9
+      --
+      Compression:        125 MB/s  alloc/cycle: 131825 B
+      Decompression:      2467 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  10.294311366866571s
+    
+
+      Streaming with BufferPool at 9
+      --
+      Compression:        126 MB/s  alloc/cycle: 209 B
+      Decompression:      2525 MB/s  alloc/cycle: 201 B
+      Compression Ratio:  10.294311366866571s
+    
+
+      Streaming (multi-threaded) at 9
+      --
+      Compression:        50 MB/s  alloc/cycle: 131825 B
+      Decompression:      1228 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  10.294311366866571s
+    
+
+      Streaming at 9 to direct ByteBuffers
+      --
+      Compression:        63 MB/s  alloc/cycle: 121 B
+      Decompression:      1277 MB/s  alloc/cycle: 105 B
+      Compression Ratio:  10.294311366866571s
+    
+
+      Streaming at 9 with Long Distance Matching
+      --
+      Compression:        99 MB/s  alloc/cycle: 131825 B
+      Decompression:      1724 MB/s  alloc/cycle: 131305 B
+      Compression Ratio:  10.270713762804094s
+    
+[info] - should be fast with streaming at level 9
+[info] ScalaTest
+[info] Run completed in 1 minute, 36 seconds.
+[info] Total number of tests run: 151
+[info] Suites: completed 3, aborted 0
+[info] Tests: succeeded 148, failed 3, canceled 0, ignored 0, pending 0
+[info] *** 3 TESTS FAILED ***
+[error] Failed: Total 151, Failed 3, Errors 0, Passed 148
+[error] Failed tests:
+[error] 	com.github.luben.zstd.ZstdPerfSpec
+[error] 	com.github.luben.zstd.ZstdSpec
+[error] (Test / test) sbt.TestsFailedException: Tests unsuccessful
+
