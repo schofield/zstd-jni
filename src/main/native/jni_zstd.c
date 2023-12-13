@@ -5,6 +5,8 @@
 #include <zstd.h>
 #include <zstd_errors.h>
 #include <stdint.h>
+#include <stdio.h>
+#include <qatseqprod.h>
 
 
 /*
@@ -17,10 +19,36 @@ static size_t JNI_ZSTD_compress(void* dst, size_t dstCapacity,
 
     ZSTD_CCtx* const cctx = ZSTD_createCCtx();
 
-    ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, compressionLevel);
-    ZSTD_CCtx_setParameter(cctx, ZSTD_c_checksumFlag, (checksumFlag == JNI_TRUE));
+    /* ZSTD_CCtx_setParameter(cctx, ZSTD_c_compressionLevel, compressionLevel); */
+    /* ZSTD_CCtx_setParameter(cctx, ZSTD_c_checksumFlag, (checksumFlag == JNI_TRUE)); */
+
+    printf("here was called 1");
+
+    /* QZSTD_startQatDevice();*/
+    printf("here was called 2");
+    /* Create sequence producer state for QAT sequence producer */
+    /* void *sequenceProducerState = QZSTD_createSeqProdState(); */
+    printf("here was called 3");
+    /* register qatSequenceProducer */
+    /* ZSTD_registerSequenceProducer( */
+        /* cctx, */
+        /* sequenceProducerState, */
+        /* qatSequenceProducer */
+    /* ); */
+    printf("here was called 4");
+    /* Enable sequence producer fallback */
+    /* ZSTD_CCtx_setParameter(cctx, ZSTD_c_enableSeqProducerFallback, 1);*/
+    printf("here was called 5");
 
     size_t const size = ZSTD_compress2(cctx, dst, dstCapacity, src, srcSize);
+    printf("here was called 6");
+    /* Free sequence producer state */
+    /* QZSTD_freeSeqProdState(sequenceProducerState); */
+    /* Please call QZSTD_stopQatDevice before
+    QAT is no longer used or the process exits */
+    /* QZSTD_stopQatDevice(); */
+
+
 
     ZSTD_freeCCtx(cctx);
     return size;

@@ -110,6 +110,9 @@ JNIEXPORT jlong JNICALL Java_com_github_luben_zstd_ZstdDirectBufferCompressingSt
     ZSTD_outBuffer output = { dst_buf_ptr + dst_offset, dst_size, 0 };
     ZSTD_inBuffer input = { src_buf_ptr + src_offset, src_size, 0 };
 
+    /* printf("here doing stuff");*/
+
+
     size = ZSTD_compressStream((ZSTD_CStream *)(intptr_t) stream, &output, &input);
 
     (*env)->SetIntField(env, obj, consumed_id, input.pos);

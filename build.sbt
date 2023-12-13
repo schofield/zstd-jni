@@ -60,12 +60,21 @@ val PWD = Option(System.getenv("PWD")).getOrElse("./")
 
 jniUseCpp11 := false
 
-jniCppExtensions := Seq("c", "S")
+jniCppExtensions := Seq("a","c", "S")
 
 jniGccFlags ++= Seq(
   "-std=c99", "-Wundef", "-Wshadow", "-Wcast-align", "-Wstrict-prototypes", "-Wno-unused-variable",
-  "-Wpointer-arith", "-DZSTD_LEGACY_SUPPORT=4", "-DZSTD_MULTITHREAD=1", "-lpthread", "-flto"
+  "-Wpointer-arith", "-DZSTD_LEGACY_SUPPORT=4", "-DZSTD_MULTITHREAD=0", "-lpthread", "-flto"
 )
+jniLibraries := Seq(
+  "-losal",
+  "-ladf",
+  "-lusdm_drv_s",
+  "-lqatseqprod",
+  "-lqat_s",
+  "-ludev"
+)
+
 
 // compilation on Windows with MSYS/gcc needs extra flags in order
 // to produce correct DLLs, also it alway produces position independent

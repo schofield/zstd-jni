@@ -24,10 +24,13 @@
 #include "zstd_fast.h"
 #include "zstd_double_fast.h"
 #include "zstd_lazy.h"
+#include "zstd_lazy.h"
 #include "zstd_opt.h"
 #include "zstd_ldm.h"
 #include "zstd_compress_superblock.h"
 #include  "../common/bits.h"      /* ZSTD_highbit32, ZSTD_rotateRight_U64 */
+#include <stdio.h>
+#include <qatseqprod.h>
 
 /* ***************************************************************
 *  Tuning parameters
@@ -5252,7 +5255,19 @@ size_t ZSTD_compressCCtx(ZSTD_CCtx* cctx,
                          int compressionLevel)
 {
     DEBUGLOG(4, "ZSTD_compressCCtx (srcSize=%u)", (unsigned)srcSize);
+    DEBUGLOG(4, "DOINGSTUFF (srcSize=%u)", (unsigned)srcSize);
     assert(cctx != NULL);
+
+    /* QZSTD_startQatDevice();*/
+      
+    /* ZSTD_CCtx_setParameter(cctx, ZSTD_c_nbWorkers, 0);*/
+    /* ZSTD_CCtx_setParameter(cctx, ZSTD_c_enableLongDistanceMatching, (int)ZSTD_ps_disable);*/
+    /* Start QAT device, start QAT device at any
+    time before compression job started */
+    /* Create sequence producer state for QAT sequence producer */
+    /* void *sequenceProducerState = QZSTD_createSeqProdState();*/
+    /* register qatSequenceProducer */
+
     return ZSTD_compress_usingDict(cctx, dst, dstCapacity, src, srcSize, NULL, 0, compressionLevel);
 }
 
@@ -5263,15 +5278,18 @@ size_t ZSTD_compress(void* dst, size_t dstCapacity,
     size_t result;
 #if ZSTD_COMPRESS_HEAPMODE
     ZSTD_CCtx* cctx = ZSTD_createCCtx();
+    DEBUGLOG(1, "DOINGSTUFFblehx");
     RETURN_ERROR_IF(!cctx, memory_allocation, "ZSTD_createCCtx failed");
     result = ZSTD_compressCCtx(cctx, dst, dstCapacity, src, srcSize, compressionLevel);
     ZSTD_freeCCtx(cctx);
 #else
     ZSTD_CCtx ctxBody;
+    DEBUGLOG(1, "DOINGSTUFFblehy");
     ZSTD_initCCtx(&ctxBody, ZSTD_defaultCMem);
     result = ZSTD_compressCCtx(&ctxBody, dst, dstCapacity, src, srcSize, compressionLevel);
     ZSTD_freeCCtxContent(&ctxBody);   /* can't free ctxBody itself, as it's on stack; free only heap content */
 #endif
+    exit(0);
     return result;
 }
 
@@ -6325,9 +6343,15 @@ size_t ZSTD_compress2(ZSTD_CCtx* cctx,
 {
     ZSTD_bufferMode_e const originalInBufferMode = cctx->requestedParams.inBufferMode;
     ZSTD_bufferMode_e const originalOutBufferMode = cctx->requestedParams.outBufferMode;
-    DEBUGLOG(4, "ZSTD_compress2 (srcSize=%u)", (unsigned)srcSize);
     ZSTD_CCtx_reset(cctx, ZSTD_reset_session_only);
     /* Enable stable input/output buffers. */
+
+    /* Start QAT device, start QAT device at any
+    time before compression job started */
+    /* Create sequence producer state for QAT sequence producer */
+
+
+
     cctx->requestedParams.inBufferMode = ZSTD_bm_stable;
     cctx->requestedParams.outBufferMode = ZSTD_bm_stable;
     {   size_t oPos = 0;
